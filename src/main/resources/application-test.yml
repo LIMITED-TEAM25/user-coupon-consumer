@@ -1,0 +1,12 @@
+server:
+  port: 19099
+
+spring:
+  application:
+    name: user-coupon-consumer
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - classpath:properties/jpa.yml
+      - classpath:properties/database.yml
+      - classpath:properties/eureka-client.yml
