@@ -1,2 +1,2 @@
-# coupon-cousumer-service
-coupon-cousumer-service
+# user-coupon-consumer
+user-coupon-consumer
