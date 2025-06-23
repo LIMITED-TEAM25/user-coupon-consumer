@@ -10,14 +10,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class UserCouponEventConsumer implements StreamListener<String, MapRecord<String, String, String>> {
 
     private final UserCouponConsumerService userCouponConsumerService;
 
     @Override
     public void onMessage(MapRecord<String, String, String> record) {
-        log.info("쿠폰 발급 이벤트 감지");
         UserCouponIssuedEvent event = EventMapper.eventToDto(record);
         userCouponConsumerService.createUserCoupon(event);
     }
