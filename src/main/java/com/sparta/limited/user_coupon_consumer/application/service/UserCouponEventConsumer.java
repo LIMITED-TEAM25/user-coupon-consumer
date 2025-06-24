@@ -3,7 +3,6 @@ package com.sparta.limited.user_coupon_consumer.application.service;
 import com.sparta.limited.user_coupon_consumer.application.dto.UserCouponIssuedEvent;
 import com.sparta.limited.user_coupon_consumer.application.mapper.EventMapper;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.stream.MapRecord;
 import org.springframework.data.redis.stream.StreamListener;
 import org.springframework.stereotype.Service;
